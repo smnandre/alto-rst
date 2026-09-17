@@ -1,7 +1,8 @@
 # Editing
 
 `Editor` plans typed changes against the exact `Source` and `ParseResult` that
-produced the selected node handles.
+produced the selected node handles. With Composer's autoloader loaded, this
+example replaces one section body and appends a section:
 
 ```php
 use Alto\Rst\Edit\Editor;
@@ -9,6 +10,7 @@ use Alto\Rst\Node\Section;
 use Alto\Rst\Rst;
 use Alto\Rst\Source\Source;
 
+$input = "Guide\n=====\n\nOriginal body.\n";
 $source = Source::fromString($input);
 $parsed = Rst::symfony()->parse($source->bytes);
 $section = $parsed->document()->children()[0];
@@ -22,6 +24,20 @@ $editor->replaceSectionBody($section, "New body.\n");
 $editor->insertTopLevel("Appendix\n========\n");
 
 $rst = $editor->toRst();
+echo $rst;
+```
+
+The output keeps the original heading and replaces only its body before
+appending the requested section:
+
+```rst
+Guide
+=====
+
+New body.
+
+Appendix
+========
 ```
 
 `replaceSectionBody()` includes nested subsections but not the next sibling.

@@ -10,7 +10,7 @@ use Alto\Rst\Rst;
 $html = Rst::sphinx()->toHtml("Guide\n=====\n\nWelcome.\n");
 ```
 
-## Start
+## Introduction
 
 - [Installation](installation.md): install the package and verify the runtime.
 - [Getting started](getting-started.md): render and inspect one document.
@@ -51,9 +51,9 @@ $html = Rst::sphinx()->toHtml("Guide\n=====\n\nWelcome.\n");
 - [Projects](conversion/projects.md): convert complete documentation trees.
 - [Reports](conversion/reports.md): review lossy or approximate mappings.
 
-## Reference
+## Cross-references
 
-- [Reference](reference/index.md): build and query a graph.
+- [Overview](reference/index.md): build and query a graph.
 - [Links](reference/links.md): resolve targets and hyperlinks.
 - [Footnotes](reference/footnotes.md): resolve notes and citations.
 - [Substitutions](reference/substitutions.md): expand bounded replacements.
@@ -69,7 +69,7 @@ $html = Rst::sphinx()->toHtml("Guide\n=====\n\nWelcome.\n");
 
 - [Security](security.md): control files, URLs, raw HTML, and expansion limits.
 
-## API
+## Reference
 
 - [Overview](api/index.md): map the public surface by task.
 - [Parsing](api/parsing.md): entry points, profiles, and parse results.
@@ -84,3 +84,9 @@ $html = Rst::sphinx()->toHtml("Guide\n=====\n\nWelcome.\n");
 HTML output escapes text, filters unsafe URLs, and keeps file-reading
 constructs disabled by default. Read [Security](security.md) before granting
 additional authority.
+
+## Package
+
+- [Changelog](https://github.com/altophp/rst/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/altophp/rst/blob/main/CONTRIBUTING.md)
+- [Support](https://github.com/altophp/rst/blob/main/SUPPORT.md)

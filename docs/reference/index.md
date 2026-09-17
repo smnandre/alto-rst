@@ -1,4 +1,4 @@
-# Reference
+# Cross-references
 
 The reference graph resolves targets, hyperlinks, notes, citations, and
 substitutions separately from the source-preserving document tree.
